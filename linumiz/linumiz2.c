@@ -45,13 +45,13 @@ void print_stack() {
 }
 
 int main() {
-    //current directory
+                                //current directory
     char Existing_dir[100];
     printf("Existing dir: %s\n", getcwd(Existing_dir, 100));
     getcwd(dir_stack[stack_size], 1024);// svae current directory
     stack_size++;
-    pushd("/var/log");//push the new directory
-    pushd("/etc");    
+    pushd("etc");
+    pushd("/var/log");//push the new directory   
     print_stack();    //print the stack
     popd();           //popd the last in directory
     print_stack();    //print the stack
